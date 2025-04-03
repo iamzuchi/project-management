@@ -1,4 +1,4 @@
-import express from "express";
+import express, {Request, Response} from "express";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
 import cors from "cors";
@@ -34,6 +34,8 @@ app.use("/search", searchRoutes);
 app.use("/users", userRoutes);
 app.use("/teams", teamRoutes);
 app.use("/comments", commentRoutes);
+
+
 
 /* SERVER */
 const port = Number(process.env.PORT) || 3000;
